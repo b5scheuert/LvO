@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Telegram Web App</title>
+</head>
+<body>
+    <h1>Hello from my Web App!</h1>
+    <button id="sendDataBtn">Send Data to Bot</button>
+
+    <script>
+        // Telegram Web Apps API
+        const tg = window.Telegram.WebApp;
+
+        // This will send a message back to the bot
+        document.getElementById('sendDataBtn').addEventListener('click', () => {
+            tg.sendData("Hello Bot, this is the Web App!");
+        });
+
+        // Optional: adjust web app height
+        tg.expand();
+    </script>
+</body>
+</html>
